@@ -1,0 +1,8 @@
+numpy
+scipy
+soundfile
+matplotlib
+matchering
+pandas
+statsmodels
+pillow
