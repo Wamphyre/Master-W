@@ -10,20 +10,17 @@ Master-W es una aplicación de masterización de audio basada en referencia, que
 - Procesamiento de audio de alta calidad usando Matchering 2.0
 - Visualización detallada de información de audio
 - Log detallado del proceso de masterización
-- Multiplataforma (Windows, Linux, macOS)
-
-## Requisitos
-
-```
-Python 3.x
-numpy
-scipy
-soundfile
-matplotlib
-matchering>=2.0.0
-```
+- Multiplataforma (Windows, Linux)
 
 ## Instalación
+
+### Windows
+Descargue e instale `Master-W-Setup.exe` desde la sección de [Releases](https://github.com/Wamphyre/Master-W/releases).
+
+### ArchLinux
+```bash
+sudo pacman -U master-w-1.0.0-1-x86_64.pkg.tar.zst
+```
 
 ### Desde el código fuente
 
@@ -38,25 +35,22 @@ cd Master-W
 pip install -r requirements.txt
 ```
 
-### Windows
-
-Descargue el instalador desde la sección de [Releases](https://github.com/Wamphyre/Master-W/releases).
-
 ## Uso
 
 1. Ejecute la aplicación:
    - En Windows: Use el acceso directo creado por el instalador
+   - En ArchLinux: Ejecute `master-w`
    - Desde el código fuente: `python main.py`
 
 2. Flujo de trabajo:
 
    a. **Cargar Audio Original**:
-   - Haga clic en "Cargar Original"
+   - Haga clic en "Cargar"
    - Seleccione el archivo de audio que desea masterizar
    - Los formatos soportados incluyen WAV, MP3, FLAC, AIFF y OGG
 
    b. **Cargar Audio de Referencia**:
-   - Haga clic en "Cargar Referencia"
+   - Haga clic en "Cargar"
    - Seleccione el archivo de audio que servirá como referencia
    - Este debería ser una pista profesionalmente masterizada con el sonido que desea emular
 
@@ -81,8 +75,8 @@ La interfaz muestra dos gráficas principales:
 1. **Forma de Onda**:
    - Muestra la amplitud del audio en el tiempo
    - Verde: Audio original
-   - Rojo: Audio de referencia
-   - Cian: Audio masterizado
+   - Azul: Audio de referencia
+   - Amarillo: Audio masterizado
 
 2. **Espectro de Frecuencias**:
    - Muestra la distribución de frecuencias
